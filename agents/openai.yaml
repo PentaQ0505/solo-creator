@@ -1,0 +1,9 @@
+interface:
+  display_name: "Solo Creator"
+  short_description: "持续策划、创作并复盘小红书与微信公众号个人品牌内容"
+  default_prompt: "Use $solo-creator to turn my recent notes or account positioning into publish-ready Xiaohongshu and WeChat content."
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#FEBD08"
+policy:
+  allow_implicit_invocation: true
