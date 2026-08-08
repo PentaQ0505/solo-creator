@@ -43,6 +43,8 @@ Suggest image positions only when they support comprehension or credibility:
 
 Provide a cover concept, cover line, abstract, and Markdown-ready body. Produce HTML only when the user requests it or a publishing workflow requires it.
 
+When the user asks for rendered images, use `visual-production.md`. Default to a coordinated 21:9 article header and 1:1 share card. Use a single-cover engine only for a deliberately lightweight deliverable; use a social-card engine when the cover must match a wider visual series.
+
 ## Cross-platform adaptation
 
 When adapting from Xiaohongshu:

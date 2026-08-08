@@ -10,8 +10,8 @@
 
 - 从笔记、截图、决策、失败记录和产品进展中提取可复用的内容原子
 - 生成并评分选题，规划可持续的内容节奏
-- 生成完整的小红书图文包：标题、封面、逐页文案、视觉建议、正文、标签与评论引导
-- 生成微信公众号文章：标题、摘要、结构、Markdown 正文、配图位置与封面方案
+- 生成完整的小红书图文包：标题、封面、逐页文案、正文、标签与评论引导；在安装视觉引擎后可继续渲染 PNG/JPG
+- 生成微信公众号文章：标题、摘要、结构、Markdown 正文、配图位置与封面方案；按需生成 21:9 头图与 1:1 分享封面
 - 在小红书和公众号之间进行真正的内容改编，而不是机械扩写或压缩
 - 在没有近期素材时，用受众问题、方法、公开案例、观点提案和常青内容持续创作
 - 维护内容库，记录素材证据、使用历史和剩余衍生方向
@@ -33,12 +33,14 @@ solo-creator/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── assets/icon.svg
+├── scripts/visual_preflight.py
 └── references/
     ├── automation.md
     ├── content-engine.md
     ├── creator-profile.md
     ├── output-contracts.md
     ├── quality-control.md
+    ├── visual-production.md
     ├── wechat.md
     └── xiaohongshu.md
 ```
@@ -87,6 +89,38 @@ git clone https://github.com/PentaQ0505/solo-creator.git .claude/skills/solo-cre
 
 本仓库采用以 `SKILL.md` 为入口的 Agent Skills 结构。将整个仓库克隆或复制到工具支持的个人级或项目级 Skill 目录中；目录名保持为 `solo-creator`。Cursor 用户可参考 [Cursor Agent Skills 文档](https://cursor.com/docs/skills) 选择当前版本支持的安装位置。
 
+## 可选视觉引擎
+
+Solo Creator 负责编排内容和视觉生产，不内置或重新分发第三方模板。需要输出真实图片文件时，可以按任务调用以下独立项目：
+
+| 项目 | 用途 | 集成方式 | 许可证说明 |
+| --- | --- | --- | --- |
+| [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill) | 小红书多页卡片、公众号 21:9 + 1:1 封面对、截图教程 | 外部 Agent Skill | AGPL-3.0；代码和模板不会复制进本 MIT 仓库 |
+| [Kami](https://github.com/tw93/Kami) | 公众号视觉摘要、一页纸、产品说明、流程图 | 外部 Skill / Plugin | MIT；字体可能有独立条款 |
+| [weizwz/cover](https://github.com/weizwz/cover) | 单张轻量封面 | 外部网页或本地 Next.js 应用 | MIT；它是封面应用，不是 Agent Skill，也没有文档化的 CLI/API |
+
+通用 Agent 安装 Guizang：
+
+```bash
+npx skills add https://github.com/op7418/guizang-social-card-skill --skill guizang-social-card-skill
+```
+
+通用 Agent 安装 Kami：
+
+```bash
+npx skills add tw93/kami/plugins/kami -a universal -g -y
+```
+
+Cover 可以使用[在线版本](https://cover.weizwz.com)，也可以克隆原仓库本地运行。使用在线图片搜索时需按其说明配置 Unsplash access key。
+
+检查当前机器能否发现视觉引擎：
+
+```bash
+python3 scripts/visual_preflight.py --json
+```
+
+宿主工具通过插件系统安装的引擎可能不会暴露文件路径；此时以宿主实际可调用的 Skill/Plugin 为准。
+
 ## 个性化
 
 安装后，优先编辑 `references/creator-profile.md`：
@@ -130,6 +164,14 @@ git clone https://github.com/PentaQ0505/solo-creator.git .claude/skills/solo-cre
 使用 $solo-creator。把这些零散笔记整理成内容库条目，标记证据、可公开边界、候选角度、已使用方向和剩余衍生内容。
 ```
 
+### 6. 直接生成可分享图片
+
+```text
+使用 $solo-creator。把这篇内容做成 7 张可以直接发布的小红书图片。
+先检查事实和卡片文案，再调用 Guizang 生成 1080×1440 PNG，
+提供成图、总览图和素材来源记录；不要只给视觉建议。
+```
+
 ## 设计原则
 
 - 真实优先于戏剧性
@@ -137,6 +179,7 @@ git clone https://github.com/PentaQ0505/solo-creator.git .claude/skills/solo-cre
 - 一个内容只解决一个核心读者问题
 - 不把公开案例写成“我的经历”
 - 自动化默认只生成草稿，未经确认不自动发布
+- 请求图片时必须交付真实成图；如果外部引擎不可用，要明确说明，不能把提示词或 HTML 当成成图
 - 先建立可持续系统，再追求偶发流量
 
 ## 许可证

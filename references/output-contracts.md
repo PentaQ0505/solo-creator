@@ -35,6 +35,7 @@ Return only the contract matching the user's request. Combine contracts for mult
 - Relevant tags.
 - Pinned comment or discussion question when useful.
 - Confirmation notes.
+- When rendered images are requested: final PNG/JPG cards in posting order, one contact-sheet preview, visual manifest, asset-source record, and any render blocker. Do not substitute visual suggestions for image files.
 
 ## WeChat package
 
@@ -45,6 +46,7 @@ Return only the contract matching the user's request. Combine contracts for mult
 - Image placement notes.
 - Cover concept and cover line.
 - Confirmation notes and sources.
+- When rendered images are requested: final 21:9 header and 1:1 share cover, plus only the article illustrations that materially improve comprehension. Include source records and image-placement mapping.
 
 ## Dual-platform package
 
@@ -53,6 +55,17 @@ Return only the contract matching the user's request. Combine contracts for mult
 - Complete WeChat package.
 - Explain only the material adaptation choices that affect user review.
 - Reuse suggestions for later posts.
+- When visual production is requested, preserve one brand system across both platforms while rendering platform-native dimensions.
+
+## Visual production package
+
+- Final approved copy or clearly labeled draft version used for rendering.
+- Engine choice and why it matches the deliverable.
+- Visual manifest with platform, dimensions, order, page role, copy, visual source, and alt text.
+- Actual image artifacts and a contact-sheet preview.
+- Asset-source record and license/attribution notes.
+- Visual QA result and any unresolved issue.
+- If rendering is blocked, return the manifest and exact missing engine or capability; never claim completion.
 
 ## Performance review
 

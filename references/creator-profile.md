@@ -28,6 +28,13 @@ Connect the pillars with one recognizable narrative. Do not run them as unrelate
 - Do not require face-to-camera footage unless the creator wants it.
 - Use Xiaohongshu for discoverable, focused, visual ideas; use WeChat for complete reasoning and durable long-form assets.
 
+## Visual identity
+
+- Record the preferred visual engine, style system, accent color, typography, logo/signature, screenshot treatment, and reusable cover pattern when supplied.
+- Default to structured, text-led layouts for methods and product content; use restrained editorial layouts for reflective stories.
+- Keep one recognizable system across a series while adapting dimensions to each platform.
+- Treat any model-proposed visual preference as a recommendation until the creator approves it.
+
 ## Voice
 
 - Honest, calm, curious, specific, and appropriately self-reflective.

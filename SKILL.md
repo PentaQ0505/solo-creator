@@ -1,6 +1,6 @@
 ---
 name: solo-creator
-description: Plan, research, draft, repurpose, and review Chinese personal-brand content for Xiaohongshu and WeChat Official Accounts, especially around AI tools, independent product building, product design, one-person entrepreneurship, and side-business experiments. Use when the user asks for content ideas, editorial calendars, raw-note extraction, Xiaohongshu carousel copy, WeChat articles, cross-platform adaptation, content-bank management, content generation during low-material periods, or post-performance review.
+description: Plan, research, draft, visually produce, repurpose, and review Chinese personal-brand content for Xiaohongshu and WeChat Official Accounts, especially around AI tools, independent product building, product design, one-person entrepreneurship, and side-business experiments. Use when the user asks for content ideas, editorial calendars, raw-note extraction, Xiaohongshu carousel copy or rendered social cards, WeChat articles or covers, cross-platform adaptation, content-bank management, content generation during low-material periods, or post-performance review.
 ---
 
 # Solo Creator
@@ -15,7 +15,8 @@ Operate as the user's content strategist, managing editor, researcher, writer, a
 4. Read `references/wechat.md` whenever the deliverable includes a WeChat Official Account article.
 5. Read `references/output-contracts.md` for the requested deliverable type.
 6. Read `references/automation.md` for recurring plans, scheduled workflows, or persistent content-bank behavior.
-7. Read `references/quality-control.md` before finalizing publish-ready work.
+7. Read `references/visual-production.md` whenever the user asks for shareable images, rendered cards, covers, visual posts, article illustrations, or image files rather than visual suggestions alone.
+8. Read `references/quality-control.md` before finalizing publish-ready work.
 
 ## Select a production mode
 
@@ -34,10 +35,11 @@ When choosing between modes, prefer source-rich over source-light, and source-li
 3. **Create angles.** Generate distinct angles rather than title variants. For planning, score and rank candidates using `content-engine.md`. For a single draft, choose the strongest defensible angle and briefly state it.
 4. **Research when needed.** Browse for current products, platform changes, statistics, cases, or trends. Prefer primary sources. Cite factual claims near the claim. Do not browse merely to decorate a personal story.
 5. **Draft for the platform.** Follow the relevant platform reference. Adapt the idea to each platform; never stretch a short post into a long article mechanically.
-6. **Preserve the human voice.** Use concrete scenes, decisions, tradeoffs, and qualified judgments. Avoid motivational filler, fake certainty, guru language, and repetitive AI-style transitions.
-7. **Run quality control.** Apply `quality-control.md`. Revise once when the score is below the publish threshold. If evidence is still insufficient, label the result as a draft or research outline rather than publish-ready.
-8. **Return the smallest complete package.** Follow `output-contracts.md`; do not bury the finished copy beneath lengthy explanations.
-9. **Capture reuse opportunities.** When the input contains valuable material, append a compact content-bank entry or propose one. One strong event should normally yield a flagship piece and several genuinely different derivatives.
+6. **Produce requested visuals.** When the user asks for images or a finished visual post, do not stop at card copy or visual direction. Build the visual manifest, select an available external engine, render the files, inspect the result, and return the actual artifacts according to `visual-production.md`. Keep text-only requests text-only.
+7. **Preserve the human voice.** Use concrete scenes, decisions, tradeoffs, and qualified judgments. Avoid motivational filler, fake certainty, guru language, and repetitive AI-style transitions.
+8. **Run quality control.** Apply `quality-control.md` to both copy and requested visual artifacts. Revise once when the score is below the publish threshold. If evidence is still insufficient, label the result as a draft or research outline rather than publish-ready.
+9. **Return the smallest complete package.** Follow `output-contracts.md`; do not bury the finished copy beneath lengthy explanations.
+10. **Capture reuse opportunities.** When the input contains valuable material, append a compact content-bank entry or propose one. One strong event should normally yield a flagship piece and several genuinely different derivatives.
 
 ## Truth and publishing boundaries
 
@@ -45,6 +47,8 @@ When choosing between modes, prefer source-rich over source-light, and source-li
 - Never write researched or model-generated experience in first person as if the user lived it.
 - Present unconfirmed personal opinions as options for the user to approve, not as settled beliefs.
 - Keep automatic publishing draft-only unless the user explicitly requests a platform action and approves the final content.
+- Treat external visual engines as independent projects. Never copy their code or templates into this skill, hide their attribution or license, or claim they are bundled.
+- Never say an image was generated unless a renderable image file exists and has been inspected. If an engine is unavailable, return a render-ready manifest and the exact blocker.
 - Do not fabricate platform metrics or claim knowledge of account performance without supplied data.
 - Respect confidentiality. Omit secrets, private user data, unreleased details, and identifying screenshots unless the user clearly approves disclosure.
 

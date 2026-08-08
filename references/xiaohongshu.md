@@ -61,6 +61,8 @@ For each card, specify the primary visual source:
 
 Favor real artifacts for credibility. Redact private data. Keep a consistent grid, typography hierarchy, color system, and cover treatment across a series.
 
+When the user asks for a finished visual post or shareable images, the visual brief is an intermediate artifact, not the final deliverable. Continue through `visual-production.md` and render the cards. Default to 1080×1440 (3:4) unless the user or current platform requirement specifies otherwise.
+
 ## Deliverable
 
 Return in this order unless the user asks otherwise:
@@ -72,3 +74,4 @@ Return in this order unless the user asks otherwise:
 5. Tags.
 6. Pinned-comment or discussion prompt when useful.
 7. Claims or personal details requiring confirmation.
+8. Rendered card files and contact sheet when requested.

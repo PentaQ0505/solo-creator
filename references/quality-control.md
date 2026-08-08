@@ -54,3 +54,17 @@ Revise when the draft contains:
 - Are private or unreleased details protected?
 - Are current claims cited and dated when necessary?
 - Are all placeholders and confirmation notes visible?
+
+## Visual artifact checklist
+
+Apply this section whenever images are requested:
+
+- Does every output file open and match the requested dimensions?
+- Is the cover legible at thumbnail size and aligned with the actual content promise?
+- Does each carousel card contain one main idea instead of a compressed article page?
+- Are titles, page numbers, footers, and key visuals inside safe areas without clipping or overlap?
+- Are fonts readable on a phone and Chinese punctuation rendered correctly?
+- Are screenshots, faces, account names, keys, and private data redacted where necessary?
+- Are external images documented with source and license or replaced with user-owned/generated assets?
+- Has a contact sheet or equivalent overview been visually inspected for rhythm and consistency?
+- Do not mark visual production complete if only HTML, a prompt, or a visual brief exists and the user requested image files.
